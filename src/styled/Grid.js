@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
-import { darken, lighten } from 'polished';
-import cubeAnimation from './Animations';
+import { darken } from 'polished';
+import { cubeAnimation } from './Animations';
 
 const getSize = (props) => {
   if (props.big) {
@@ -17,7 +17,7 @@ const animation = name => css`${name} 2s infinite`;
 const gridX = 90;
 const gridY = Math.round(gridX * 0.58);
 const colors = {
-  blue: lighten(0.35, '#0069ee'),
+  blue: '#a2cbff',
   red: '#FAAFAA',
   green: '#D9F6FE',
 };
@@ -30,7 +30,7 @@ export const Grid = styled.div`
   position: absolute;
   right: 0;
   bottom: 0;
-  height: 50vh;
+  height: 100vh;
   width: 100%;
   z-index: 0;
   &:after {
@@ -40,10 +40,11 @@ export const Grid = styled.div`
     right: 0;
     width: 100%;
     height: 100%;
+    border: 20px solid #fff;
     background: rgb(27, 31, 39);
-    background: radial-gradient(circle, rgba(2, 0, 36, 0) 0%, rgba(9, 9, 121, 0) 8%, #f6f6f6 100%),
-                linear-gradient(180deg, #f6f6f6 0%, rgba(9, 9, 121, 0) 100%, rgba(2, 0, 36, 0) 100%),
-                linear-gradient(360deg, #f6f6f6 0%, rgba(9, 9, 121, 0) 100%, rgba(2, 0, 36, 0) 100%);
+    background: radial-gradient(circle, rgba(2, 0, 36, 0) 0%, rgba(255, 255, 255, 0) 8%, #f5f5f5 100%),
+                linear-gradient(180deg, #f5f5f5 0%, rgba(255, 255, 255, 0) 100%, rgba(2, 0, 36, 0) 100%),
+                linear-gradient(360deg, #f5f5f5 0%, rgba(255, 255, 255, 0) 100%, rgba(2, 0, 36, 0) 100%);
   }
 `;
 
