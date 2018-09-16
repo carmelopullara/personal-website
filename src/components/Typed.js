@@ -7,9 +7,14 @@ class Typing extends Component {
     const { strings } = this.props;
     const options = {
       strings,
+      startDelay: 4500,
       typeSpeed: 50,
       backSpeed: 50,
       loop: true,
+      onComplete: (self) => {
+        // eslint-disable-next-line
+        self.startDelay = 0;
+      },
     };
     this.typed = new Typed(this.el, options);
   }

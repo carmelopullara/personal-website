@@ -4,6 +4,10 @@ import { Grid, Cube } from '../styled/Grid';
 class Background extends Component {
   constructor(props) {
     super(props);
+    // this.handleResize = this.handleResize(this);
+
+    // window.addEventListener('resize', this.handleResize);
+
     this.setGrid = (element) => {
       this.grid = element;
     };
@@ -23,58 +27,50 @@ class Background extends Component {
 
     const items = [
       {
+        id: 0,
+        x: max.x / 2 - 4,
+        y: 3,
+        color: 'blue',
+        big: true,
+        delay: '0.6s',
+      },
+      {
         id: 1,
-        x: max.x / 2,
-        y: max.y - 2,
-        small: true,
-        color: 'green',
-        delay: '0s',
+        x: max.x / 2 - 4.5,
+        y: 3.5,
+        color: 'red',
+        delay: '0.3s',
       },
       {
         id: 2,
-        x: max.x / 2 - 3,
-        y: max.y - 3,
-        color: 'red',
-        big: true,
-        delay: '0.5s',
-      },
-      {
-        id: 3,
-        x: max.x / 2 - 3,
-        y: max.y - 1,
-        color: 'blue',
-        delay: '1s',
-      },
-      {
-        id: 4,
         x: max.x / 2 - 5,
-        y: max.y - 2,
+        y: 4,
         color: 'green',
         small: true,
-        delay: '1.5s',
+        delay: '0s',
       },
       {
         id: 5,
-        x: max.x / 2 + 3,
-        y: max.y - 3,
-        color: 'blue',
+        x: max.x / 2 + 4,
+        y: max.y - 2,
+        color: 'green',
         big: true,
-        delay: '2s',
+        delay: '3s',
       },
       {
-        id: 6,
-        x: max.x / 2 + 3,
-        y: max.y - 1,
+        id: 4,
+        x: max.x / 2 + 3.5,
+        y: max.y - 1.5,
         color: 'red',
         delay: '2.5s',
       },
       {
-        id: 7,
-        x: max.x / 2 + 5,
-        y: max.y - 2,
-        color: 'green',
+        id: 3,
+        x: max.x / 2 + 3,
+        y: max.y - 1,
+        color: 'blue',
         small: true,
-        delay: '3s',
+        delay: '2s',
       },
     ];
 

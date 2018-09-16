@@ -1,5 +1,27 @@
 import { keyframes } from 'styled-components';
 
+export const slideLeft = keyframes`
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+
+export const slideRight = keyframes`
+  0% {
+    transform: scaleX(1.3);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+`;
+
 export const cubeAnimation = {
   small: {
     main: keyframes`
@@ -39,7 +61,7 @@ export const cubeAnimation = {
         transform: translateY(0);
       }
       50% {
-        transform: translateY(22.5px);
+        transform: translateY(22px);
       }
       100% {
         transform: translateY(0);
@@ -266,7 +288,7 @@ export const thirdGlitch = keyframes`
 
 export const loadingAnimation = keyframes`
   0% {
-    transform: translateY(-100px) rotate(90deg);
+    transform: translateY(-100px) rotate(180deg);
     opacity: 0;
   }
   25% {

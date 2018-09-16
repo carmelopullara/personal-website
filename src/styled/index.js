@@ -1,10 +1,16 @@
 import styled from 'styled-components';
 import GlobalStyle from './GlobalStyle';
-import { Grid, Cube } from './Grid';
-import { firstGlitch, secondGlitch, thirdGlitch, loadingAnimation } from './Animations';
+import { Grid, Cube, Hero } from './Grid';
+import {
+  firstGlitch,
+  secondGlitch,
+  thirdGlitch,
+  loadingAnimation,
+  slideLeft,
+} from './Animations';
 
 export const Header = styled.header`
-  position: fixed;
+  position: absolute;
   top: 20px;
   left: 20px;
   right: 20px;
@@ -28,15 +34,6 @@ export const Logo = styled.div`
   }
 `;
 
-export const Hero = styled.section`
-  position: relative;
-  height: 100vh;
-  background-color: #f5f5f5;
-  align-items: center;
-  display: flex;
-  z-index: 20;
-`;
-
 export const Menu = styled.nav`
   display: flex;
   align-items: center;
@@ -48,8 +45,8 @@ export const MenuItem = styled.a`
   text-decoration: none;
   color: #151d25;
   font-size: 15px;
-  &:after{
-    content: "";
+  &:after {
+    content: '';
     position: absolute;
     bottom: -5px;
     left: -10px;
@@ -57,9 +54,9 @@ export const MenuItem = styled.a`
     width: 0;
     background-color: #151d25;
     opacity: 0;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
-  &:hover:after{
+  &:hover:after {
     opacity: 1;
     left: 0;
     width: 100%;
@@ -73,35 +70,44 @@ export const Container = styled.div`
   padding-left: 15px;
   padding-right: 15px;
   flex: 1;
+  z-index: 10;
 `;
 
 export const Title = styled.h1`
   font-size: 52px;
-  margin: -100px 0 0;
+  margin: 0;
   font-weight: 400;
   text-align: center;
+`;
+
+export const TitleWrapper = styled.span`
+  display: inline-block;
+  animation: ${slideLeft} 1s forwards;
+  animation-delay: 3.5s;
+  opacity: 0;
 `;
 
 export const Glitch = styled.span`
   display: inline-block;
   position: relative;
   font-weight: 700;
-  >span{
+  > span {
     display: inline-block;
     animation: ${firstGlitch} 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
   }
-  &:before, &:after{
-    content: "Carmelo";
+  &:before,
+  &:after {
+    content: 'Carmelo';
     position: absolute;
     top: 0;
     left: 0;
   }
-  &:before{
+  &:before {
     color: #ff6565;
     animation: ${secondGlitch} 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
     z-index: -1;
   }
-  &:after{
+  &:after {
     color: #63ead2;
     animation: ${thirdGlitch} 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
     z-index: -2;
@@ -130,20 +136,18 @@ export const LoadingScreen = styled.div`
   height: 100vh;
   background-color: #151d25;
   visibility: ${props => (props.hidden ? 'hidden' : '')};
-  transition: all .5s ease;
-  transition-delay: .5s;
+  transition: all 0.5s ease;
+  transition-delay: 0.5s;
   z-index: 1000;
   img {
     width: 80px;
     animation: ${loadingAnimation} 1.5s;
     visibility: ${props => (props.hidden ? 'hidden' : '')};
     transform: ${props => (props.hidden ? 'scale(0)' : '')};
-    transition: all .5s ease;
-  }  
+    transition: all 0.5s ease;
+  }
 `;
 
 export {
-  GlobalStyle,
-  Grid,
-  Cube,
+  GlobalStyle, Grid, Cube, Hero,
 };

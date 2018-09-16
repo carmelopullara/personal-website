@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import { darken } from 'polished';
-import { cubeAnimation } from './Animations';
+import { cubeAnimation, slideLeft, slideRight } from './Animations';
 
 const getSize = (props) => {
   if (props.big) {
@@ -22,17 +22,17 @@ const colors = {
   green: '#D9F6FE',
 };
 
-export const Grid = styled.div`
+export const Hero = styled.section`
+  position: relative;
+  height: 100vh;
+  background-color: #f5f5f5;
   background-image: linear-gradient(30deg, transparent 49%, rgba(0, 0, 0, 0.5) 50%, transparent 51%),
                     linear-gradient(330deg, transparent 49%, rgba(0, 0, 0, 0.5) 50%, transparent 51%);
   background-size: ${gridX}px ${gridY}px, ${gridX}px ${gridY}px;
   background-repeat: repeat;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  height: 100vh;
-  width: 100%;
-  z-index: 0;
+  align-items: center;
+  display: flex;
+  z-index: 20;
   &:after {
     content: '';
     position: absolute;
@@ -45,7 +45,20 @@ export const Grid = styled.div`
     background: radial-gradient(circle, rgba(2, 0, 36, 0) 0%, rgba(255, 255, 255, 0) 8%, #f5f5f5 100%),
                 linear-gradient(180deg, #f5f5f5 0%, rgba(255, 255, 255, 0) 100%, rgba(2, 0, 36, 0) 100%),
                 linear-gradient(360deg, #f5f5f5 0%, rgba(255, 255, 255, 0) 100%, rgba(2, 0, 36, 0) 100%);
+    z-index: 0;                
   }
+`;
+
+export const Grid = styled.div`
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+  animation: ${slideRight} 1s forwards;
+  animation-delay: 3s;
+  opacity: 0;
 `;
 
 export const Cube = styled.div`

@@ -2,7 +2,7 @@ import React from 'react';
 import Background from './Background';
 import Typed from './Typed';
 import {
-  Hero, Container, Title, Glitch,
+  Hero, Container, Title, TitleWrapper, Glitch,
 } from '../styled';
 
 const Home = () => (
@@ -10,11 +10,13 @@ const Home = () => (
     <Background />
     <Container>
       <Title>
-        Hey, my name is
-        {' '}
-        <Glitch>
-          <span>Carmelo</span>
-        </Glitch>
+        <TitleWrapper>
+          Hey, my name is
+          {' '}
+          <Glitch>
+            <span>Carmelo</span>
+          </Glitch>
+        </TitleWrapper>
         {'. '}
         <br />
         <Typed
