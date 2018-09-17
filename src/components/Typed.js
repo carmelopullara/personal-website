@@ -11,6 +11,7 @@ class Typing extends Component {
       typeSpeed: 50,
       backSpeed: 50,
       loop: true,
+      onStart: self => console.log(self),
       onComplete: (self) => {
         // eslint-disable-next-line
         self.startDelay = 0;

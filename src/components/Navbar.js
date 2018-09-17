@@ -16,7 +16,6 @@ const Navbar = () => (
         <Menu>
           <MenuItem href="#about">about</MenuItem>
           <MenuItem href="#works">works</MenuItem>
-          <MenuItem href="#projects">projects</MenuItem>
           <MenuItem href="#contact">contact</MenuItem>
         </Menu>
       </HeaderWrap>

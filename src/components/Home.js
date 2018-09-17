@@ -16,8 +16,8 @@ const Home = () => (
           <Glitch>
             <span>Carmelo</span>
           </Glitch>
+          {'. '}
         </TitleWrapper>
-        {'. '}
         <br />
         <Typed
           strings={['Front-End Developer.', 'Digital Entrepreneur.', 'JavaScript Enthusiast.']}

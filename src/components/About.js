@@ -3,15 +3,13 @@ import {
   AboutSection,
   Container,
   StyledLink,
-  Table,
-  TableList,
-  TableTitle,
-  Divider,
+  Heading,
 } from '../styled';
 
 const About = () => (
   <AboutSection>
     <Container>
+      <Heading blue>Who I am</Heading>
       <p>
         I&apos;m a freelance Front-End Developer from
         {' '}
@@ -54,61 +52,6 @@ const About = () => (
         , a network of freelancers where only 3% of applicants gets accepted. Here I have worked
         with companies of different sizes, providing front-end development services.
       </p>
-      <Divider />
-      <Table>
-        <TableTitle>My tech stack</TableTitle>
-        <TableList>
-          <li>React</li>
-          <li>React Native</li>
-          <li>Redux</li>
-          <li>Styled-Components</li>
-          <li>Apollo</li>
-        </TableList>
-        <TableList>
-          <li>Node.js</li>
-          <li>Express</li>
-          <li>GraphQL</li>
-          <li>Firebase</li>
-          <li>AWS</li>
-        </TableList>
-      </Table>
-      <Table>
-        <TableTitle>I have worked with</TableTitle>
-        <TableList>
-          <li>
-            <a href="https://paramount.com" target="_blank" rel="noopener noreferrer">
-              Paramount Pictures
-            </a>
-          </li>
-          <li>
-            <a href="https://dsire.com" target="_blank" rel="noopener noreferrer">
-              dsire, Inc.
-            </a>
-          </li>
-          <li>
-            <a href="https://toptal.com" target="_blank" rel="noopener noreferrer">
-              Toptal
-            </a>
-          </li>
-        </TableList>
-        <TableList>
-          <li>
-            <a href="https://nbc.com" target="_blank" rel="noopener noreferrer">
-              NBC
-            </a>
-          </li>
-          <li>
-            <a href="https://envato.com" target="_blank" rel="noopener noreferrer">
-              Envato
-            </a>
-          </li>
-          <li>
-            <a href="https://blockchainwarehouse.com" target="_blank" rel="noopener noreferrer">
-              BlockchainWarehouse
-            </a>
-          </li>
-        </TableList>
-      </Table>
     </Container>
   </AboutSection>
 );

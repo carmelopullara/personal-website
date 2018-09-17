@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import { darken } from 'polished';
-import { cubeAnimation, slideLeft, slideRight } from './Animations';
+import { cubeAnimation, slideRight } from './Animations';
 
 const getSize = (props) => {
   if (props.big) {

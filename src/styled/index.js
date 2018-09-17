@@ -90,6 +90,23 @@ export const TitleWrapper = styled.span`
   opacity: 0;
 `;
 
+export const Heading = styled.h2`
+  font-size: 24px;
+  display: inline-block;
+  position: relative;
+  font-weight: 400;
+  &:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    height: 10px;
+    background-color: ${props => (props.blue ? '#d9f6fc' : 'rgba(0,0,0,.15)')};
+    width: 100%;
+    z-index: -1;
+  }
+`;
+
 export const Glitch = styled.span`
   display: inline-block;
   position: relative;
@@ -155,7 +172,7 @@ export const AboutSection = styled.section`
   padding-top: 50px;
   padding-bottom: 50px;
   > ${Container} {
-    max-width: 720px;
+    max-width: 760px;
   }
   p {
     font-size: 17px;
@@ -234,6 +251,105 @@ export const TableList = styled.ul`
 export const Divider = styled.div`
   border-bottom: 1px solid #e6e6e6;
   margin: 50px 0;
+`;
+
+export const WorkSection = styled.section`
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #308bff;
+  color: #fff;
+  > ${Container} {
+    max-width: 760px;
+  }
+`;
+
+export const WorkNav = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  > div:first-child{
+    padding-right: 10px;
+  }
+  > div:last-child{
+    padding-left: 10px;
+  }
+`;
+
+export const WorkItem = styled.a`
+  position: relative;
+  display: block;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  color: #9ac7ff;
+  > svg {
+    height: 16px;
+    width: 16px;
+    margin-left: 10px;
+    opacity: 0;
+    color: #fff;
+    transform: translateX(-10px);
+    transition: all .3s;
+  }
+  span:first-child{
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    padding: 0 5px;
+    margin-right: 5px;
+    font-size: 22px;
+    font-weight: bold;
+    transition: all .3s ease;
+    transition-delay: .5s;
+    overflow: hidden;
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      z-index: -1;
+      transform: translate3d(-100%,0,0) translate3d(-1px,0,0);
+      transition: transform 0.5s;
+      transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background: #fff;
+      z-index: -1;
+      transition: all .5s ease;
+      transition-delay: .5s;
+    }
+  }
+  span:nth-child(2){
+    display: inline-block;
+    transition-delay: .7s;
+    transition: all .3s ease;
+  }
+  &:hover{
+    span:first-child{
+      color: #308bff;
+      &:before{
+        transform: translate3d(100%,0,0) translate3d(1px,0,0);
+      }
+      &:after{
+        height: 100%;
+      }
+    }
+    span:nth-child(2){
+      color: #fff;
+    }
+    > svg {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 `;
 
 export {
