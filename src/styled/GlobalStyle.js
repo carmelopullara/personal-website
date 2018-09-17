@@ -24,16 +24,22 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body{
-    font-family: 'Apercu';
+    font-family: 'Apercu', sans-serif;
     font-weight: 400;
     font-size: 16px;
     color: #151d25;
+    line-height: 1.45;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   .typed-cursor {
     color: #f98177;
+  }
+
+  a{
+    color: #6faeff;
+    text-decoration: none;
   }
 `;
 

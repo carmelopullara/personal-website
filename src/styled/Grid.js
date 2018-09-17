@@ -32,6 +32,7 @@ export const Hero = styled.section`
   background-repeat: repeat;
   align-items: center;
   display: flex;
+  overflow: hidden;
   z-index: 20;
   &:after {
     content: '';

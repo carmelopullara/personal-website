@@ -19,7 +19,7 @@ class Loading extends Component {
   }
 
   componentWillUnmount() {
-    this.loadingTimeout = null;
+    clearTimeout(this.loadingTimeout);
   }
 
   render() {

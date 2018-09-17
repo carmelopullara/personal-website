@@ -78,6 +78,9 @@ export const Title = styled.h1`
   margin: 0;
   font-weight: 400;
   text-align: center;
+  @media screen and (max-width: 767px) {
+    font-size: 44px;
+  }
 `;
 
 export const TitleWrapper = styled.span`
@@ -146,6 +149,91 @@ export const LoadingScreen = styled.div`
     transform: ${props => (props.hidden ? 'scale(0)' : '')};
     transition: all 0.5s ease;
   }
+`;
+
+export const AboutSection = styled.section`
+  padding-top: 50px;
+  padding-bottom: 50px;
+  > ${Container} {
+    max-width: 720px;
+  }
+  p {
+    font-size: 17px;
+  }
+`;
+
+export const StyledLink = styled.a`
+  position: relative;
+  display: inline-block;
+  color: #151d25;
+  &:hover{
+    &:before{
+      transform: rotate(4deg) scale(1.2);
+    }
+  }
+  &:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(249, 255, 159, 0.9);
+    z-index: -1;
+    transform: rotate(-4deg) scale(1.1);
+    transition: all .3s ease;
+  }
+`;
+
+export const Table = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+`;
+
+export const TableTitle = styled.h5`
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  flex-basis: 40%;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
+  }
+`;
+
+export const TableList = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  flex-basis: 30%;
+  a {
+    color: #151d25;
+    position: relative;
+    &:hover:before{
+      width: 100%;
+    }
+    &:before{
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 100%;
+      background-color: rgba(249, 255, 159, 0.9);
+      transition: all .3s ease;
+      z-index: -1;
+    }
+  }
+`;
+
+export const Divider = styled.div`
+  border-bottom: 1px solid #e6e6e6;
+  margin: 50px 0;
 `;
 
 export {
