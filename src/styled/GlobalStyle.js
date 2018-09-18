@@ -3,10 +3,12 @@ import ApercuRegular from '../assets/fonts/Apercu-Regular.woff';
 import ApercuRegular2 from '../assets/fonts/Apercu-Regular.woff2';
 import ApercuBold from '../assets/fonts/Apercu-Bold.woff';
 import ApercuBold2 from '../assets/fonts/Apercu-Bold.woff2';
+import { blue, black } from './index';
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'Apercu';
+    font-display: auto;
     src: url(${ApercuRegular});
     src: url(${ApercuRegular2});
     font-weight: 400;
@@ -14,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'Apercu';
+    font-display: auto;
     src: url(${ApercuBold});
     src: url(${ApercuBold2});
     font-weight: 700;
@@ -27,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Apercu', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    color: #151d25;
+    color: ${black};
     line-height: 1.45;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -37,8 +40,12 @@ const GlobalStyle = createGlobalStyle`
     color: #f98177;
   }
 
+  .cursor--hidden + .typed-cursor{
+    opacity: 0;
+  }
+
   a{
-    color: #6faeff;
+    color: ${blue};
     text-decoration: none;
   }
 `;

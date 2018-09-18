@@ -7,7 +7,7 @@ import {
 } from '../styled';
 
 const About = () => (
-  <AboutSection>
+  <AboutSection id="about">
     <Container>
       <Heading blue>Who I am</Heading>
       <p>
@@ -28,27 +28,27 @@ const About = () => (
         I&apos;m mainly focused on JavaScript.
       </p>
       <p>
-        From 2014 to 2018, I have worked full-time as WordPress Developer on
+        From 2014 to 2018, I have worked full-time as Elite author on
         {' '}
-        <StyledLink
+        <a
           href="https://themeforest.net/user/hodylab/portfolio"
           target="_blank"
           rel="noopener noreferrer"
         >
           ThemeForest
-        </StyledLink>
-        , building premium themes that power more than 5000 websites around the world.
+        </a>
+        , building premium WordPress themes that power more than 5000 websites around the world.
       </p>
       <p>
         In 2018 I joined
         {' '}
-        <StyledLink
+        <a
           href="https://www.toptal.com/resume/carmelo-pullara"
           target="_blank"
           rel="noopener noreferrer"
         >
           Toptal
-        </StyledLink>
+        </a>
         , a network of freelancers where only 3% of applicants gets accepted. Here I have worked
         with companies of different sizes, providing front-end development services.
       </p>

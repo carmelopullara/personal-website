@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import Typed from 'typed.js';
 import Proptypes from 'prop-types';
 
+const sleep = ms => new Promise((resolve) => {
+  setTimeout(() => {
+    resolve();
+  }, ms);
+});
+
 class Typing extends Component {
   componentDidMount() {
     const { strings } = this.props;
@@ -11,23 +17,27 @@ class Typing extends Component {
       typeSpeed: 50,
       backSpeed: 50,
       loop: true,
-      onStart: self => console.log(self),
       onComplete: (self) => {
         // eslint-disable-next-line
         self.startDelay = 0;
       },
     };
     this.typed = new Typed(this.el, options);
+    setTimeout(() => {
+      this.el.classList.remove('cursor--hidden');
+    }, 4000);
   }
 
   componentWillUnmount() {
     this.typed.destroy();
+    clearTimeout(this.classTimeout);
   }
 
   render() {
     return (
       <span
         style={{ whiteSpace: 'pre' }}
+        className="cursor--hidden"
         ref={(el) => {
           this.el = el;
         }}

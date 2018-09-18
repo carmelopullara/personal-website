@@ -4,6 +4,14 @@ import {
   Header, Container, Menu, HeaderWrap, Logo, MenuItem,
 } from '../styled';
 
+const scroll = (e, section) => {
+  e.preventDefault();
+  document.getElementById(section).scrollIntoView({
+    behavior: 'smooth',
+    block: 'start',
+  });
+};
+
 const Navbar = () => (
   <Header>
     <Container>
@@ -14,9 +22,9 @@ const Navbar = () => (
           </a>
         </Logo>
         <Menu>
-          <MenuItem href="#about">about</MenuItem>
-          <MenuItem href="#works">works</MenuItem>
-          <MenuItem href="#contact">contact</MenuItem>
+          <MenuItem href="#about" onClick={e => scroll(e, 'about')}>about</MenuItem>
+          <MenuItem href="#works" onClick={e => scroll(e, 'works')}>works</MenuItem>
+          <MenuItem href="#contact" onClick={e => scroll(e, 'contact')}>contact</MenuItem>
         </Menu>
       </HeaderWrap>
     </Container>

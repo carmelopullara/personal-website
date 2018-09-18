@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import GlobalStyle from './GlobalStyle';
 import { Grid, Cube, Hero } from './Grid';
 import {
   firstGlitch,
@@ -8,6 +7,9 @@ import {
   loadingAnimation,
   slideLeft,
 } from './Animations';
+
+export const black = '#151d25';
+export const blue = '#308bff';
 
 export const Header = styled.header`
   position: absolute;
@@ -43,7 +45,7 @@ export const MenuItem = styled.a`
   position: relative;
   margin: 0 15px;
   text-decoration: none;
-  color: #151d25;
+  color: ${black};
   font-size: 15px;
   &:after {
     content: '';
@@ -52,7 +54,7 @@ export const MenuItem = styled.a`
     left: -10px;
     height: 2px;
     width: 0;
-    background-color: #151d25;
+    background-color: ${black};
     opacity: 0;
     transition: all 0.3s ease;
   }
@@ -101,7 +103,8 @@ export const Heading = styled.h2`
     left: 0;
     bottom: 2px;
     height: 10px;
-    background-color: ${props => (props.blue ? '#d9f6fc' : 'rgba(0,0,0,.15)')};
+    background-color: ${props => (props.blue ? blue : '#000')};
+    opacity: ${props => (props.blue ? 0.5 : 0.15)};
     width: 100%;
     z-index: -1;
   }
@@ -135,10 +138,41 @@ export const Glitch = styled.span`
 `;
 
 export const Footer = styled.footer`
-  background-color: #151d25;
+  background-color: ${black};
   padding-top: 100px;
   padding-bottom: 100px;
   text-align: center;
+  color: #fff;
+  h3{
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 0;
+    a {
+      color: #fff;
+      display: block;
+      span{
+        margin-left: 5px;
+      }
+    }
+  }
+`;
+
+export const Socials = styled.nav`
+  margin: 25px 0;
+  > a {
+    color: #fff;
+    display: inline-block;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: all .3s ease;
+    &:hover{
+      color: ${blue};
+    }
+  }
+`;
+
+export const FooterCopy = styled.p`
+  font-size: 13px;
 `;
 
 export const FooterLogo = styled.img`
@@ -154,7 +188,7 @@ export const LoadingScreen = styled.div`
   align-items: center;
   width: ${props => (props.hidden ? 0 : '100vw')};
   height: 100vh;
-  background-color: #151d25;
+  background-color: ${black};
   visibility: ${props => (props.hidden ? 'hidden' : '')};
   transition: all 0.5s ease;
   transition-delay: 0.5s;
@@ -182,7 +216,7 @@ export const AboutSection = styled.section`
 export const StyledLink = styled.a`
   position: relative;
   display: inline-block;
-  color: #151d25;
+  color: ${black};
   &:hover{
     &:before{
       transform: rotate(4deg) scale(1.2);
@@ -229,7 +263,7 @@ export const TableList = styled.ul`
   font-size: 15px;
   flex-basis: 30%;
   a {
-    color: #151d25;
+    color: ${black};
     position: relative;
     &:hover:before{
       width: 100%;
@@ -256,7 +290,7 @@ export const Divider = styled.div`
 export const WorkSection = styled.section`
   padding-top: 70px;
   padding-bottom: 70px;
-  background-color: #308bff;
+  background-color: ${blue};
   color: #fff;
   > ${Container} {
     max-width: 760px;
@@ -334,7 +368,7 @@ export const WorkItem = styled.a`
   }
   &:hover{
     span:first-child{
-      color: #308bff;
+      color: ${blue};
       &:before{
         transform: translate3d(100%,0,0) translate3d(1px,0,0);
       }
@@ -353,5 +387,5 @@ export const WorkItem = styled.a`
 `;
 
 export {
-  GlobalStyle, Grid, Cube, Hero,
+  Grid, Cube, Hero,
 };

@@ -5,49 +5,49 @@ import {
 } from '../styled';
 
 const Works = () => (
-  <WorkSection>
+  <WorkSection id="works">
     <Container>
       <Heading>Some recent works</Heading>
       <WorkNav>
         <div>
-          <WorkItem href="http://themes.hody.co/bezel" target="_blank">
+          <WorkItem href="http://themes.hody.co/bezel" target="_blank" rel="noopener noreferrer">
             <span>Bezel</span>
             <span>creative WP theme.</span>
             <LinkIcon />
           </WorkItem>
-          <WorkItem href="http://themes.hody.co/comet" target="_blank">
+          <WorkItem href="http://themes.hody.co/comet" target="_blank" rel="noopener noreferrer">
             <span>Comet</span>
             <span>multi-purpose WP theme.</span>
             <LinkIcon />
           </WorkItem>
-          <WorkItem href="http://themes.hody.co/dylan" target="_blank">
+          <WorkItem href="http://themes.hody.co/dylan" target="_blank" rel="noopener noreferrer">
             <span>Dylan</span>
             <span>multi-concept WP theme.</span>
             <LinkIcon />
           </WorkItem>
-          <WorkItem href="https://plentix.io" target="_blank">
+          <WorkItem href="https://plentix.io" target="_blank" rel="noopener noreferrer">
             <span>Plentix</span>
             <span>ICO landing page.</span>
             <LinkIcon />
           </WorkItem>
         </div>
         <div>
-          <WorkItem href="https://traidia.io" target="_blank">
+          <WorkItem href="https://traidia.io" target="_blank" rel="noopener noreferrer">
             <span>Traidia</span>
             <span>ICO landing page.</span>
             <LinkIcon />
           </WorkItem>
-          <WorkItem href="https://healthgates.com/" target="_blank">
+          <WorkItem href="https://healthgates.com/" target="_blank" rel="noopener noreferrer">
             <span>Healthgates</span>
             <span>ICO landing page.</span>
             <LinkIcon />
           </WorkItem>
-          <WorkItem href="https://token.theheartbit.com/" target="_blank">
+          <WorkItem href="https://token.theheartbit.com/" target="_blank" rel="noopener noreferrer">
             <span>Heartbit</span>
             <span>ICO landing page.</span>
             <LinkIcon />
           </WorkItem>
-          <WorkItem href="https://sindric.io/" target="_blank">
+          <WorkItem href="https://sindric.io/" target="_blank" rel="noopener noreferrer">
             <span>Sindric</span>
             <span>ICO landing page.</span>
             <LinkIcon />
