@@ -6,14 +6,17 @@ import { Grid, Cube } from '../styled/Grid';
 class Background extends Component {
   constructor(props) {
     super(props);
+    const windowGlobal = typeof window !== 'undefined' && window;
+
     this.setGrid = (element) => {
       this.grid = element;
     };
     this.state = {
       grid: [],
-      x: Math.floor(window.innerWidth / 90),
-      y: Math.floor(window.innerHeight / 52),
+      x: Math.floor(windowGlobal.innerWidth / 90),
+      y: Math.floor(windowGlobal.innerHeight / 52),
     };
+
     this.buildGrid = this.buildGrid.bind(this);
     this.handleResize = this.handleResize.bind(this);
   }
