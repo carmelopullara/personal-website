@@ -22,7 +22,7 @@ class Background extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('resize', debounce(this.handleResize, 100));
+    // window.addEventListener('resize', debounce(this.handleResize, 100));
     const { x, y } = this.state;
     this.buildGrid(x, y);
   }
