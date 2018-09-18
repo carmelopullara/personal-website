@@ -39,6 +39,9 @@ export const Logo = styled.div`
 export const Menu = styled.nav`
   display: flex;
   align-items: center;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 `;
 
 export const MenuItem = styled.a`
@@ -58,10 +61,13 @@ export const MenuItem = styled.a`
     opacity: 0;
     transition: all 0.3s ease;
   }
-  &:hover:after {
-    opacity: 1;
-    left: 0;
-    width: 100%;
+  &:hover{
+    color: ${black};
+    &:after {
+      opacity: 1;
+      left: 0;
+      width: 100%;
+    }
   }
 `;
 
@@ -81,7 +87,7 @@ export const Title = styled.h1`
   font-weight: 400;
   text-align: center;
   @media screen and (max-width: 767px) {
-    font-size: 44px;
+    font-size: 40px;
   }
 `;
 
@@ -306,15 +312,24 @@ export const WorkNav = styled.nav`
   > div:last-child{
     padding-left: 10px;
   }
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    > div:first-child, > div:last-child {
+      padding: 0;
+    }
+  }
 `;
 
 export const WorkItem = styled.a`
   position: relative;
-  display: block;
   margin: 20px 0;
   display: flex;
   align-items: center;
   color: #9ac7ff;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   > svg {
     height: 16px;
     width: 16px;
@@ -382,6 +397,19 @@ export const WorkItem = styled.a`
     > svg {
       transform: translateX(0);
       opacity: 1;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    span:nth-child(2){
+      padding: 0 5px;
+    }
+    svg {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      opacity: 1;
+      transform: none;
+      margin-top: -16px;
     }
   }
 `;

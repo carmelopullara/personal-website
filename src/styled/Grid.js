@@ -34,7 +34,22 @@ export const Hero = styled.section`
   display: flex;
   overflow: hidden;
   z-index: 20;
-  &:after {
+  >div:last-child {
+    z-index: 30;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(2, 0, 36, 0) 0%, rgba(255, 255, 255, 0) 8%, #f5f5f5 100%),
+                linear-gradient(180deg, #f5f5f5 0%, rgba(255, 255, 255, 0) 100%, rgba(2, 0, 36, 0) 100%),
+                linear-gradient(360deg, #f5f5f5 0%, rgba(255, 255, 255, 0) 100%, rgba(2, 0, 36, 0) 100%);
+    z-index: 0;                
+  }
+  &:after{
     content: '';
     position: absolute;
     left: 0;
@@ -42,11 +57,7 @@ export const Hero = styled.section`
     width: 100%;
     height: 100%;
     border: 20px solid #fff;
-    background: rgb(27, 31, 39);
-    background: radial-gradient(circle, rgba(2, 0, 36, 0) 0%, rgba(255, 255, 255, 0) 8%, #f5f5f5 100%),
-                linear-gradient(180deg, #f5f5f5 0%, rgba(255, 255, 255, 0) 100%, rgba(2, 0, 36, 0) 100%),
-                linear-gradient(360deg, #f5f5f5 0%, rgba(255, 255, 255, 0) 100%, rgba(2, 0, 36, 0) 100%);
-    z-index: 0;                
+    z-index: 20;
   }
 `;
 
@@ -64,17 +75,19 @@ export const Grid = styled.div`
 
 export const Cube = styled.div`
   position: absolute;
-  top: ${props => gridY * props.y + 5}px;
-  left: ${props => gridX * props.x}px;
   animation: ${props => animation(cubeAnimation[getSize(props)].main)};
   animation-delay: ${props => props.delay || ''};
   z-index: 10;
-  ${props => props.big && `
-    top: ${gridY * props.y + 5 - 45}px;
-  `}
-  ${props => props.small && `
-    top: ${gridY * props.y + 5 + 22.5}px;
-  `}
+  @media (min-width: 992px) {
+    top: ${props => gridY * props.y + 5}px;
+    left: ${props => gridX * props.x}px;
+    ${props => props.big && `
+      top: ${gridY * props.y + 5 - 45}px;
+    `}
+    ${props => props.small && `
+      top: ${gridY * props.y + 5 + 22.5}px;
+    `}
+  }
   &:before, &:after {
     content: '';
   }
@@ -111,6 +124,33 @@ export const Cube = styled.div`
   & > span {
     transform: rotate(210deg) skewX(-30deg) scaleY(0.864);
     background-color: ${props => colors[props.color]};
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    left: ${props => gridX * props.mediumX}px;
+    ${props => !props.big && !props.small && `
+      top: ${gridY * props.mediumY + 5}px;
+    `}
+    ${props => props.big && `
+      top: ${gridY * props.mediumY + 5 - 45}px;
+    `}
+    ${props => props.small && `
+      top: ${gridY * props.mediumY + 5 + 22.5}px;
+    `}
+  }
+  @media (max-width: 767px) {
+    ${props => !props.smallX && `
+      display: none;
+    `}
+    left: ${props => gridX * props.smallX}px;
+    ${props => !props.big && !props.small && `
+      top: ${gridY * props.smallY + 5}px;
+    `}
+    ${props => props.big && `
+      top: ${gridY * props.smallY + 5 - 45}px;
+    `}
+    ${props => props.small && `
+      top: ${gridY * props.smallY + 5 + 22.5}px;
+    `}
   }
 `;
 

@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { darken } from 'polished';
 import ApercuRegular from '../assets/fonts/Apercu-Regular.woff';
 import ApercuRegular2 from '../assets/fonts/Apercu-Regular.woff2';
 import ApercuBold from '../assets/fonts/Apercu-Bold.woff';
@@ -36,17 +37,28 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
 
+  a{
+    color: ${blue};
+    text-decoration: none;
+    transition: color .3s ease;
+    &:hover{
+      color: ${darken(0.1, blue)};
+    }
+  }
+
   .typed-cursor {
     color: #f98177;
   }
 
-  .cursor--hidden + .typed-cursor{
-    opacity: 0;
+  .typed-el{
+    white-space: pre;
+    @media screen and (max-width: 767px) {
+      font-size: 28px;
+    }
   }
 
-  a{
-    color: ${blue};
-    text-decoration: none;
+  .cursor--hidden + .typed-cursor{
+    opacity: 0;
   }
 `;
 
