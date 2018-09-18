@@ -23,7 +23,7 @@ export default () => (
       <meta property="og:url" content="https://pullara.me" />
       <meta property="og:title" content="Carmelo Pullara — Front-End Developer" />
       <meta property="og:description" content="Personal website of Carmelo Pullara. Front-End Developer and digital entrepreneur from Italy." />
-      <meta property="og:image" content="https://i.imgur.com/1ChWAdq.png" />
+      <meta property="og:image" content="https://i.imgur.com/MoOKb5E.png" />
     </Helmet>
     <GlobalStyle />
     <Loading />
