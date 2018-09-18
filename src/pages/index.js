@@ -12,10 +12,17 @@ import GlobalStyle from '../styled/GlobalStyle';
 export default () => (
   <Fragment>
     <Helmet>
-      <title>Carmelo Pullara — Front-End Developer</title>
-      <meta name="description" content="Front-End Developer based in Italy. JavaScript enthusiast, with a passion for web, tech, startups and science." />
-      <meta name="referrer" content="origin" />
       <html lang="en" />
+      <title>Carmelo Pullara — Front-End Developer</title>
+      <meta
+        name="description"
+        content="Front-End Developer based in Italy. JavaScript enthusiast, with a passion for web, tech, startups and science."
+      />
+      <meta name="referrer" content="origin" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://pullara.me" />
+      <meta property="og:title" content="Carmelo Pullara — Front-End Developer" />
+      <meta property="og:image" content="https://i.imgur.com/1ChWAdq.png" />
     </Helmet>
     <GlobalStyle />
     <Loading />
