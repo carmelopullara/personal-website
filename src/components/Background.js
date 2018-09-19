@@ -51,7 +51,7 @@ class Background extends Component {
         mediumX: max.x / 2 - 1,
         mediumY: 4,
         smallX: max.x / 2,
-        smallY: max.y - 2,
+        smallY: max.y - 1,
       },
       {
         id: 1,
@@ -62,7 +62,7 @@ class Background extends Component {
         mediumX: max.x / 2 - 1.5,
         mediumY: 4.5,
         smallX: max.x / 2 + 0.5,
-        smallY: max.y - 1.5,
+        smallY: max.y - 0.5,
       },
       {
         id: 3,
@@ -74,7 +74,7 @@ class Background extends Component {
         mediumX: max.x / 2 - 2,
         mediumY: 5,
         smallX: max.x / 2 - 0.5,
-        smallY: max.y - 1.5,
+        smallY: max.y - 0.5,
       },
       {
         id: 4,

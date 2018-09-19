@@ -224,6 +224,7 @@ export const StyledLink = styled.a`
   display: inline-block;
   color: ${black};
   &:hover{
+    color: ${black};
     &:before{
       transform: rotate(4deg) scale(1.2);
     }
