@@ -1,9 +1,6 @@
 import React from 'react';
 import {
-  AboutSection,
-  Container,
-  StyledLink,
-  Heading,
+  AboutSection, Container, StyledLink, Heading, Block,
 } from '../styled';
 
 const About = () => (
@@ -52,6 +49,17 @@ const About = () => (
         , a network of freelancers where only 3% of applicants gets accepted. Here I have worked
         with companies of different sizes, providing front-end development services.
       </p>
+      <Block>
+        <p>
+          I&apos;m currently taking new projects (and also considering full-time, remote positions),
+          so if you want to work with me feel free to
+          {' '}
+          <a href="mailto:carmelo@pullara.me" target="_blank" rel="noopener noreferrer">
+            get in touch
+          </a>
+          .
+        </p>
+      </Block>
     </Container>
   </AboutSection>
 );

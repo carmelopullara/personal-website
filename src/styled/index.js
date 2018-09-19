@@ -243,6 +243,16 @@ export const StyledLink = styled.a`
   }
 `;
 
+export const Block = styled.blockquote`
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  border-left: 5px solid #2888ff;
+  p{
+    margin: 0;
+  }
+`;
+
 export const Table = styled.div`
   display: flex;
   justify-content: space-between;
