@@ -25,6 +25,11 @@ const Works = () => (
             <span>multi-concept WP theme.</span>
             <LinkIcon />
           </WorkItem>
+          <WorkItem href="SVG icons as React components." target="_blank" rel="noopener noreferrer">
+            <span>React Feather</span>
+            <span>SVG icons for React.js</span>
+            <LinkIcon />
+          </WorkItem>
           <WorkItem href="https://plentix.io" target="_blank" rel="noopener noreferrer">
             <span>Plentix</span>
             <span>ICO landing page.</span>
