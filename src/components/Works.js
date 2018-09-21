@@ -25,7 +25,7 @@ const Works = () => (
             <span>multi-concept WP theme.</span>
             <LinkIcon />
           </WorkItem>
-          <WorkItem href="SVG icons as React components." target="_blank" rel="noopener noreferrer">
+          <WorkItem href="https://github.com/carmelopullara/react-feather" target="_blank" rel="noopener noreferrer">
             <span>React Feather</span>
             <span>SVG icons for React.js</span>
             <LinkIcon />
