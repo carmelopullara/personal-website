@@ -49,6 +49,14 @@ const About = () => (
         , a network of freelancers where only 3% of applicants gets accepted. Here I have worked
         with companies of different sizes, providing front-end development services.
       </p>
+      <p>
+        You can take a look at my resume
+        {' '}
+        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+          here
+        </a>
+        .
+      </p>
       <Block>
         <p>
           I&apos;m currently taking new projects (and also considering full-time, remote positions).
