@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import debounce from 'lodash.debounce';
 import { Grid, Cube } from '../styled/Grid';
 
 
