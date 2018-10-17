@@ -59,8 +59,7 @@ const About = () => (
       </p>
       <Block>
         <p>
-          I&apos;m currently taking new projects (and also considering full-time, remote positions).
-          If you want to work with, me feel free to
+          I&apos;m currently taking new projects. If you want to work with, me feel free to
           {' '}
           <a href="mailto:carmelo@pullara.me" target="_blank" rel="noopener noreferrer">
             get in touch
