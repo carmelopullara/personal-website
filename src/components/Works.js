@@ -30,15 +30,10 @@ const Works = () => (
             <span>SVG icons for React.js</span>
             <LinkIcon />
           </WorkItem>
-          <WorkItem href="https://plentix.io" target="_blank" rel="noopener noreferrer">
-            <span>Plentix</span>
-            <span>ICO landing page.</span>
-            <LinkIcon />
-          </WorkItem>
         </div>
         <div>
-          <WorkItem href="https://traidia.io" target="_blank" rel="noopener noreferrer">
-            <span>Traidia</span>
+          <WorkItem href="https://plentix.io" target="_blank" rel="noopener noreferrer">
+            <span>Plentix</span>
             <span>ICO landing page.</span>
             <LinkIcon />
           </WorkItem>
