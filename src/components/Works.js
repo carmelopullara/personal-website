@@ -37,11 +37,6 @@ const Works = () => (
             <span>ICO landing page.</span>
             <LinkIcon />
           </WorkItem>
-          <WorkItem href="https://healthgates.com/" target="_blank" rel="noopener noreferrer">
-            <span>Healthgates</span>
-            <span>ICO landing page.</span>
-            <LinkIcon />
-          </WorkItem>
           <WorkItem href="https://token.theheartbit.com/" target="_blank" rel="noopener noreferrer">
             <span>Heartbit</span>
             <span>ICO landing page.</span>
